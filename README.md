@@ -1,2 +1,1 @@
-# ethtwitter
-準備中〜
+Under construction
