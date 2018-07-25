@@ -12,10 +12,6 @@ contract UserStorage is BaseStorage{
     address ownerAddr;
     address controllerAddr;
 
-    function setControllerAddr(address _controllerAddr) public onlyOwner{
-        controllerAddr = _controllerAddr;
-    }
-
     mapping(uint => Profile) public profiles;
 
     uint latestUserId = 0;

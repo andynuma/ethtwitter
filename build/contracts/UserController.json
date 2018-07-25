@@ -1,0 +1,1162 @@
+{
+  "contractName": "UserController",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_managerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "setManagerAddr",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "ownerAddr",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_username",
+          "type": "bytes32"
+        }
+      ],
+      "name": "createUser",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555061051a806100536000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680637978b231146100675780639c675eaa146100aa578063abf7bfd814610101578063f2fde38b14610146575b600080fd5b34801561007357600080fd5b506100a8600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610189565b005b3480156100b657600080fd5b506100bf610228565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561010d57600080fd5b50610130600480360381019080803560001916906020019092919050505061024d565b6040518082815260200191505060405180910390f35b34801561015257600080fd5b50610187600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610414565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156101e457600080fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080600080600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1692508273ffffffffffffffffffffffffffffffffffffffff1663bf40fac16040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180806020018281038252600b8152602001807f5573657253746f72616765000000000000000000000000000000000000000000815250602001915050602060405180830381600087803b15801561031857600080fd5b505af115801561032c573d6000803e3d6000fd5b505050506040513d602081101561034257600080fd5b810190808051906020019092919050505091508190508073ffffffffffffffffffffffffffffffffffffffff1663abf7bfd8866040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808260001916600019168152602001915050602060405180830381600087803b1580156103cf57600080fd5b505af11580156103e3573d6000803e3d6000fd5b505050506040513d60208110156103f957600080fd5b81019080805190602001909291905050509350505050919050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561046f57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156104ab57600080fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a7230582017559cbbbc0e1d8f7f85d7b04f33ccf54a9dfe172be5e96d6c8728075446c3cf0029",
+  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680637978b231146100675780639c675eaa146100aa578063abf7bfd814610101578063f2fde38b14610146575b600080fd5b34801561007357600080fd5b506100a8600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610189565b005b3480156100b657600080fd5b506100bf610228565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561010d57600080fd5b50610130600480360381019080803560001916906020019092919050505061024d565b6040518082815260200191505060405180910390f35b34801561015257600080fd5b50610187600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610414565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156101e457600080fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080600080600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1692508273ffffffffffffffffffffffffffffffffffffffff1663bf40fac16040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180806020018281038252600b8152602001807f5573657253746f72616765000000000000000000000000000000000000000000815250602001915050602060405180830381600087803b15801561031857600080fd5b505af115801561032c573d6000803e3d6000fd5b505050506040513d602081101561034257600080fd5b810190808051906020019092919050505091508190508073ffffffffffffffffffffffffffffffffffffffff1663abf7bfd8866040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808260001916600019168152602001915050602060405180830381600087803b1580156103cf57600080fd5b505af11580156103e3573d6000803e3d6000fd5b505050506040513d60208110156103f957600080fd5b81019080805190602001909291905050509350505050919050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561046f57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156104ab57600080fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a7230582017559cbbbc0e1d8f7f85d7b04f33ccf54a9dfe172be5e96d6c8728075446c3cf0029",
+  "sourceMap": "128:373:7:-;;;212:10:4;200:9;;:22;;;;;;;;;;;;;;;;;;128:373:7;;;;;;",
+  "deployedSourceMap": "128:373:7:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;150:105:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;150:105:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;47:24:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;47:24:4;;;;;;;;;;;;;;;;;;;;;;;;;;;176:323:7;;8:9:-1;5:2;;;30:1;27;20:12;5:2;176:323:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;235:144:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;235:144:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;150:105:2;130:9:4;;;;;;;;;;;116:23;;:10;:23;;;108:32;;;;;;;;236:12:2;222:11;;:26;;;;;;;;;;;;;;;;;;150:105;:::o;47:24:4:-;;;;;;;;;;;;;:::o;176:323:7:-;230:4;246:24;312;383;289:11;;;;;;;;;;;246:55;;339:8;:19;;;:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;339:34:7;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;339:34:7;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;339:34:7;;;;;;;;;;;;;;;;312:61;;422:16;383:56;;458:12;:23;;;482:9;458:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;458:34:7;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;458:34:7;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;458:34:7;;;;;;;;;;;;;;;;451:41;;176:323;;;;;;:::o;235:144:4:-;130:9;;;;;;;;;;;116:23;;:10;:23;;;108:32;;;;;;;;337:1;316:23;;:9;:23;;;;308:32;;;;;;;;363:9;351;;:21;;;;;;;;;;;;;;;;;;235:144;:::o",
+  "source": "pragma solidity ^0.4.19;\n\nimport \"../helpers/BaseController.sol\";\nimport \"../ContractManager.sol\";\nimport \"./UserStorage.sol\";\n\ncontract UserController  is BaseController{\n    function createUser(bytes32 _username) public returns(uint) {\n        ContractManager _manager = ContractManager(managerAddr);\n\n        address _userStorageAddr = _manager.getAddress(\"UserStorage\");\n        UserStorage _userStorage = UserStorage(_userStorageAddr); \n\n        return _userStorage.createUser(_username);\n    }\n}",
+  "sourcePath": "/Users/andy/tweeteth/tweether/contracts/users/UserController.sol",
+  "ast": {
+    "absolutePath": "/Users/andy/tweeteth/tweether/contracts/users/UserController.sol",
+    "exportedSymbols": {
+      "UserController": [
+        302
+      ]
+    },
+    "id": 303,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 264,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "absolutePath": "/Users/andy/tweeteth/tweether/contracts/helpers/BaseController.sol",
+        "file": "../helpers/BaseController.sol",
+        "id": 265,
+        "nodeType": "ImportDirective",
+        "scope": 303,
+        "sourceUnit": 131,
+        "src": "26:39:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/andy/tweeteth/tweether/contracts/ContractManager.sol",
+        "file": "../ContractManager.sol",
+        "id": 266,
+        "nodeType": "ImportDirective",
+        "scope": 303,
+        "sourceUnit": 54,
+        "src": "66:32:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/andy/tweeteth/tweether/contracts/users/UserStorage.sol",
+        "file": "./UserStorage.sol",
+        "id": 267,
+        "nodeType": "ImportDirective",
+        "scope": 303,
+        "sourceUnit": 361,
+        "src": "99:27:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 268,
+              "name": "BaseController",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 130,
+              "src": "156:14:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_BaseController_$130",
+                "typeString": "contract BaseController"
+              }
+            },
+            "id": 269,
+            "nodeType": "InheritanceSpecifier",
+            "src": "156:14:7"
+          }
+        ],
+        "contractDependencies": [
+          130,
+          206
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 302,
+        "linearizedBaseContracts": [
+          302,
+          130,
+          206
+        ],
+        "name": "UserController",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 300,
+              "nodeType": "Block",
+              "src": "236:263:7",
+              "statements": [
+                {
+                  "assignments": [
+                    277
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 277,
+                      "name": "_manager",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 301,
+                      "src": "246:24:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ContractManager_$53",
+                        "typeString": "contract ContractManager"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 276,
+                        "name": "ContractManager",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 53,
+                        "src": "246:15:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ContractManager_$53",
+                          "typeString": "contract ContractManager"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 281,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 279,
+                        "name": "managerAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 117,
+                        "src": "289:11:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 278,
+                      "name": "ContractManager",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53,
+                      "src": "273:15:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_ContractManager_$53_$",
+                        "typeString": "type(contract ContractManager)"
+                      }
+                    },
+                    "id": 280,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "273:28:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ContractManager_$53",
+                      "typeString": "contract ContractManager"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "246:55:7"
+                },
+                {
+                  "assignments": [
+                    283
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 283,
+                      "name": "_userStorageAddr",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 301,
+                      "src": "312:24:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 282,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "312:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 288,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5573657253746f72616765",
+                        "id": 286,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "359:13:7",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_debaa55f7d082c9901660eadd80a0cb32c005b09c1b66bf1d91c135662933850",
+                          "typeString": "literal_string \"UserStorage\""
+                        },
+                        "value": "UserStorage"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_debaa55f7d082c9901660eadd80a0cb32c005b09c1b66bf1d91c135662933850",
+                          "typeString": "literal_string \"UserStorage\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 284,
+                        "name": "_manager",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 277,
+                        "src": "339:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ContractManager_$53",
+                          "typeString": "contract ContractManager"
+                        }
+                      },
+                      "id": 285,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getAddress",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 36,
+                      "src": "339:19:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_string_memory_ptr_$returns$_t_address_$",
+                        "typeString": "function (string memory) view external returns (address)"
+                      }
+                    },
+                    "id": 287,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "339:34:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "312:61:7"
+                },
+                {
+                  "assignments": [
+                    290
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 290,
+                      "name": "_userStorage",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 301,
+                      "src": "383:24:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_UserStorage_$360",
+                        "typeString": "contract UserStorage"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 289,
+                        "name": "UserStorage",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 360,
+                        "src": "383:11:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_UserStorage_$360",
+                          "typeString": "contract UserStorage"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 294,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 292,
+                        "name": "_userStorageAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 283,
+                        "src": "422:16:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 291,
+                      "name": "UserStorage",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 360,
+                      "src": "410:11:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_UserStorage_$360_$",
+                        "typeString": "type(contract UserStorage)"
+                      }
+                    },
+                    "id": 293,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "410:29:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_UserStorage_$360",
+                      "typeString": "contract UserStorage"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "383:56:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 297,
+                        "name": "_username",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 271,
+                        "src": "482:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 295,
+                        "name": "_userStorage",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 290,
+                        "src": "458:12:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_UserStorage_$360",
+                          "typeString": "contract UserStorage"
+                        }
+                      },
+                      "id": 296,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "createUser",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 359,
+                      "src": "458:23:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$returns$_t_uint256_$",
+                        "typeString": "function (bytes32) external returns (uint256)"
+                      }
+                    },
+                    "id": 298,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "458:34:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 275,
+                  "id": 299,
+                  "nodeType": "Return",
+                  "src": "451:41:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 301,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createUser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 272,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 271,
+                  "name": "_username",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 301,
+                  "src": "196:17:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 270,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "196:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "195:19:7"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 275,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 274,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 301,
+                  "src": "230:4:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 273,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "230:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "229:6:7"
+            },
+            "scope": 302,
+            "src": "176:323:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 303,
+        "src": "128:373:7"
+      }
+    ],
+    "src": "0:501:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/andy/tweeteth/tweether/contracts/users/UserController.sol",
+    "exportedSymbols": {
+      "UserController": [
+        302
+      ]
+    },
+    "id": 303,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 264,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "absolutePath": "/Users/andy/tweeteth/tweether/contracts/helpers/BaseController.sol",
+        "file": "../helpers/BaseController.sol",
+        "id": 265,
+        "nodeType": "ImportDirective",
+        "scope": 303,
+        "sourceUnit": 131,
+        "src": "26:39:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/andy/tweeteth/tweether/contracts/ContractManager.sol",
+        "file": "../ContractManager.sol",
+        "id": 266,
+        "nodeType": "ImportDirective",
+        "scope": 303,
+        "sourceUnit": 54,
+        "src": "66:32:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/andy/tweeteth/tweether/contracts/users/UserStorage.sol",
+        "file": "./UserStorage.sol",
+        "id": 267,
+        "nodeType": "ImportDirective",
+        "scope": 303,
+        "sourceUnit": 361,
+        "src": "99:27:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 268,
+              "name": "BaseController",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 130,
+              "src": "156:14:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_BaseController_$130",
+                "typeString": "contract BaseController"
+              }
+            },
+            "id": 269,
+            "nodeType": "InheritanceSpecifier",
+            "src": "156:14:7"
+          }
+        ],
+        "contractDependencies": [
+          130,
+          206
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 302,
+        "linearizedBaseContracts": [
+          302,
+          130,
+          206
+        ],
+        "name": "UserController",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 300,
+              "nodeType": "Block",
+              "src": "236:263:7",
+              "statements": [
+                {
+                  "assignments": [
+                    277
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 277,
+                      "name": "_manager",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 301,
+                      "src": "246:24:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ContractManager_$53",
+                        "typeString": "contract ContractManager"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 276,
+                        "name": "ContractManager",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 53,
+                        "src": "246:15:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ContractManager_$53",
+                          "typeString": "contract ContractManager"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 281,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 279,
+                        "name": "managerAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 117,
+                        "src": "289:11:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 278,
+                      "name": "ContractManager",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53,
+                      "src": "273:15:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_ContractManager_$53_$",
+                        "typeString": "type(contract ContractManager)"
+                      }
+                    },
+                    "id": 280,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "273:28:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ContractManager_$53",
+                      "typeString": "contract ContractManager"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "246:55:7"
+                },
+                {
+                  "assignments": [
+                    283
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 283,
+                      "name": "_userStorageAddr",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 301,
+                      "src": "312:24:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 282,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "312:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 288,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5573657253746f72616765",
+                        "id": 286,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "359:13:7",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_debaa55f7d082c9901660eadd80a0cb32c005b09c1b66bf1d91c135662933850",
+                          "typeString": "literal_string \"UserStorage\""
+                        },
+                        "value": "UserStorage"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_debaa55f7d082c9901660eadd80a0cb32c005b09c1b66bf1d91c135662933850",
+                          "typeString": "literal_string \"UserStorage\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 284,
+                        "name": "_manager",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 277,
+                        "src": "339:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ContractManager_$53",
+                          "typeString": "contract ContractManager"
+                        }
+                      },
+                      "id": 285,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getAddress",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 36,
+                      "src": "339:19:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_string_memory_ptr_$returns$_t_address_$",
+                        "typeString": "function (string memory) view external returns (address)"
+                      }
+                    },
+                    "id": 287,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "339:34:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "312:61:7"
+                },
+                {
+                  "assignments": [
+                    290
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 290,
+                      "name": "_userStorage",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 301,
+                      "src": "383:24:7",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_UserStorage_$360",
+                        "typeString": "contract UserStorage"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 289,
+                        "name": "UserStorage",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 360,
+                        "src": "383:11:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_UserStorage_$360",
+                          "typeString": "contract UserStorage"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 294,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 292,
+                        "name": "_userStorageAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 283,
+                        "src": "422:16:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 291,
+                      "name": "UserStorage",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 360,
+                      "src": "410:11:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_UserStorage_$360_$",
+                        "typeString": "type(contract UserStorage)"
+                      }
+                    },
+                    "id": 293,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "410:29:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_UserStorage_$360",
+                      "typeString": "contract UserStorage"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "383:56:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 297,
+                        "name": "_username",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 271,
+                        "src": "482:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 295,
+                        "name": "_userStorage",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 290,
+                        "src": "458:12:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_UserStorage_$360",
+                          "typeString": "contract UserStorage"
+                        }
+                      },
+                      "id": 296,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "createUser",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 359,
+                      "src": "458:23:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$returns$_t_uint256_$",
+                        "typeString": "function (bytes32) external returns (uint256)"
+                      }
+                    },
+                    "id": 298,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "458:34:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 275,
+                  "id": 299,
+                  "nodeType": "Return",
+                  "src": "451:41:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 301,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createUser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 272,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 271,
+                  "name": "_username",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 301,
+                  "src": "196:17:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 270,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "196:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "195:19:7"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 275,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 274,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 301,
+                  "src": "230:4:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 273,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "230:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "229:6:7"
+            },
+            "scope": 302,
+            "src": "176:323:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 303,
+        "src": "128:373:7"
+      }
+    ],
+    "src": "0:501:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {
+    "1532496655395": {
+      "events": {},
+      "links": {},
+      "address": "0x6dfa308ba60913279c67fc9b4aabda63967b5726",
+      "transactionHash": "0x1740698d99e11a0594333c0ffdb9ea326e2b9c9496c809ad2146bc112d6b7fc1"
+    }
+  },
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-07-25T07:49:15.227Z"
+}

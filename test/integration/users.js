@@ -2,19 +2,34 @@
 
 const web3 = require("web3")
 
+const utils = require("../utils")
+const {assertVMException} = utils
+
 //Get the hexTostring function from web3:
 const {
   utils:{ hexToString},
 } = web3
 
 const UserStorage = artifacts.require('UserStorage')
+const UserController = artifacts.require("UserController")
 
 contract('users', () => {
 
-  it("can create user", async () => {
+  it("can't create user without controller",async() => {
     const storage = await UserStorage.deployed()
 
-    const tx = await storage.createUser("tristan")
+    try{
+      await storage.createUser("tristan")
+      assert.fail()
+    } catch(err){
+      assertVMException(err);
+    }
+  })
+
+  it("can create user with controller", async () => {
+    const controller = await UserController.deployed()
+
+    const tx = await controller.createUser("tristan")
 
     assert.isOk(tx) // Add this line!
   });
