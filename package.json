@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "next client",
+    "dev": "npm run artifacts && next client",
+    "artifacts": "cp -r ./build/contracts/ ./client/web3/artifacts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,8 +23,10 @@
   "homepage": "https://github.com/andynuma/tweether#readme",
   "dependencies": {
     "next": "^6.1.1",
+    "node": "^10.7.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "web3": "^1.0.0-beta.34"
+    "truffle-contract": "^3.0.6",
+    "web3": "^1.0.0-beta.35"
   }
 }
